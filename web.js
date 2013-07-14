@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 var fs= require('fs');
 buf = new Buffer(256);
 
-buf.write(fs.readFile('/etc/passwd', function (err, data) {
+buf.write(fs.readFile('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
 }));
